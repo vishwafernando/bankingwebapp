@@ -8,6 +8,7 @@ It supports user signup, login, deposits, withdrawals, and transaction history.
 ## 🚀 Live Demo
 
 [https://vishwafernando.github.io/bankingwebapp](https://vishwafernando.github.io/bankingwebapp)
+[https://bankingwebapp-nu.vercel.app](https://bankingwebapp-nu.vercel.app/)
 
 ---
 
