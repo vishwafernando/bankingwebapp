@@ -1,15 +1,16 @@
 # SecureBank - Vite + React Banking App
+---
 
 SecureBank is a simple, secure banking web application built with React and Vite.  
 It supports user signup, login, deposits, withdrawals, and transaction history.
 
----
+
 
 ## Live Demo
 
 [https://vishwafernando.github.io/bankingwebapp](https://vishwafernando.github.io/bankingwebapp)
 
----
+
 
 ## Features
 
@@ -21,7 +22,7 @@ It supports user signup, login, deposits, withdrawals, and transaction history.
 - Client-side state management (React `useState`)
 - Built with Vite for fast development and optimized builds
 
----
+
 
 ## Technologies Used
 
@@ -30,7 +31,7 @@ It supports user signup, login, deposits, withdrawals, and transaction history.
 - Font Awesome (for icons)
 - CSS3 for styling
 
----
+
 
 ## Getting Started
 
@@ -58,18 +59,20 @@ To build and deploy the app:
 npm run build
 npm run deploy
 ```
+
 Make sure your `vite.config.js` includes the correct `base` path:
 
 ```bash
 base: '/bankingwebapp/'
 ```
+
 And your package.json has:
 
 ```bash
 "homepage": "https://Username.github.io/Repo-name"
 ```
 
----
+
 
 ## Project Structure
 
@@ -85,11 +88,11 @@ bankingwebapp/
 └── App.css
 ```
 
----
+
 
 ## Usage
 
----
+
 ### Sign Up
 1. If you’re a new user, choose the "Sign Up" option.
 2. Enter a username, password, and an initial balance.
@@ -105,17 +108,17 @@ bankingwebapp/
 ### Logout
 - Log out to securely save your data.
 
----
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
----
+
 
 ## Contributing
 Feel free to submit issues and pull requests to improve the application. Your contributions are welcome!
----
 
+ 
 ## Contact
 
 Created by Vishwa Fernando
