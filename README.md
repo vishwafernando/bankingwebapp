@@ -1,131 +1,138 @@
 # SecureBank - Vite + React Banking App
 
----
-
 SecureBank is a simple, secure banking web application built with React and Vite.  
 It supports user signup, login, deposits, withdrawals, and transaction history.
 
+---
 
-
-## Live Demo
+## 🚀 Live Demo
 
 [https://vishwafernando.github.io/bankingwebapp](https://vishwafernando.github.io/bankingwebapp)
 
+---
 
-
-## Features
+## 🔐 Features
 
 - User authentication (signup/login)
 - Deposit and withdraw money
 - Real-time balance updates
 - Transaction history with timestamps
 - Responsive and modern UI with Font Awesome icons
-- Client-side state management (React `useState`)
+- Client-side state management (`useState`)
 - Built with Vite for fast development and optimized builds
 
+---
 
-
-## Technologies Used
+## 🛠 Technologies Used
 
 - React 19.x
 - Vite
-- Font Awesome (for icons)
-- CSS3 for styling
+- Font Awesome
+- CSS3
 
+---
 
+## 🧰 Getting Started
 
-# Getting Started
+### ✅ Prerequisites
 
-## Prerequisites
-
-- Node.js (v16 or later recommended)
+- Node.js (v16 or later)
 - npm (comes with Node.js)
 
-## Installation
+### 📦 Installation
 
-1. Clone the repo:
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/vishwafernando/bankingwebapp.git
 cd bankingwebapp
+npm install
+npm run dev
 ```
 
----
+### 🚀 Deployment to GitHub Pages
 
-## Deployment to GitHub Pages
-
-To build and deploy the app:
+To build and deploy the app to GitHub Pages:
 
 ```bash
 npm run build
 npm run deploy
 ```
 
-Make sure your `vite.config.js` includes the correct `base` path:
+#### Configuration
+
+Ensure these settings are correct:
+
+In `vite.config.js`:
 
 ```bash
-base: '/bankingwebapp/'
+export default defineConfig({
+  base: '/bankingwebapp/',
+  plugins: [react()],
+});
 ```
 
-And your package.json has:
+In `package.json`:
 
 ```bash
-"homepage": "https://Username.github.io/Repo-name"
+"homepage": "https://vishwafernando.github.io/bankingwebapp"
 ```
 
+### 📁 Project Structure
 
 
-# Project Structure
-
-```
+```bash
 bankingwebapp/
 ├── index.html
 ├── package.json
 ├── vite.config.js
 └── src/
-├── App.jsx
-├── main.jsx
-├── index.css
-└── App.css
+    ├── App.jsx
+    ├── main.jsx
+    ├── index.css
+    └── App.css
 ```
 
+### 📌 Usage
 
 
-# Usage
+### 🔹 Sign Up
 
+-Click "Sign Up".
 
-### Sign Up
-1. If you’re a new user, choose the "Sign Up" option.
-2. Enter a username, password, and an initial balance.
+-Enter a username, password, and an initial balance.
 
-### Login
-1. For existing users, select "Login."
-2. Enter your username and password.
+### 🔹 Login
+-Click "Login".
 
-### Deposit/Withdraw
-1. After logging in, choose to deposit or withdraw funds.
-2. The application will update and display your balance after each transaction.
+-Enter your username and password.
 
-### Logout
-- Log out to securely save your data.
+### 🔹 Deposit / Withdraw
+-After logging in, use the form to deposit or withdraw money.
 
+-Transactions are saved and displayed in real-time.
 
+### 🔹 Logout
+-Click "Logout" to end the session securely.
 
-# License
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+### 📄 License
+This project is licensed under the MIT License.
+See the LICENSE file for full details.
 
+### 🤝 Contributing
+Contributions are welcome!
+Feel free to submit issues or pull requests to help improve this app.
 
-
-# Contributing
-Feel free to submit issues and pull requests to improve the application. Your contributions are welcome!
-
- 
-# Contact
-
+### 📬 Contact
 Created by Vishwa Fernando
 
-- GitHub: [https://github.com/vishwafernando](https://github.com/vishwafernando)  
-- Email: vishwafernando.vf@gmail.com  
-- LinkedIn: [https://linkedin.com/in/vishwafernando](https://linkedin.com/in/vishwafernando)  
+-GitHub: https://github.com/vishwafernando
+
+-Email: vishwafernando.vf@gmail.com
+
+-LinkedIn: https://linkedin.com/in/vishwafernando
 
 Feel free to reach out if you have any questions or feedback!
+
+
+---
