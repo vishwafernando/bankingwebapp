@@ -1,0 +1,544 @@
+/* src/App.css */
+/* ======== CSS VARIABLES ======== */
+:root {
+  --primary-gradient: linear-gradient(135deg, #1a3a5f 0%, #2c5f8a 100%);
+  --deposit-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --withdraw-gradient: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+  --balance-gradient: linear-gradient(135deg, #2c5f8a 0%, #1a3a5f 100%);
+  --success-color: #11998e;
+  --error-color: #ff416c;
+  --text-dark: #333;
+  --text-light: #666;
+  --text-white: #fff;
+  --border-radius: 20px;
+  --box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --card-border: 1px solid rgba(255, 255, 255, 0.3);
+  --panel-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #2c5f8a;
+}
+
+/* ======== BASE STYLES ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f5f9 0%, #d9e4ec 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 20px;
+  color: var(--text-dark);
+}
+
+/* ======== UTILITY CLASSES ======== */
+.hidden {
+  display: none !important;
+}
+
+.success-message {
+  color: var(--success-color);
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.error-message {
+  color: var(--error-color);
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* ======== APP CONTAINER ======== */
+.app-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px;
+  perspective: 1000px;
+}
+
+/* ======== PANEL STYLES ======== */
+.panel {
+  background: var(--panel-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  border: var(--card-border);
+  padding: 40px;
+  transform-style: preserve-3d;
+  transition: var(--transition);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--accent-color);
+}
+
+/* ======== LOGO SECTION ======== */
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.logo p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(44, 95, 138, 0.1);
+  color: var(--accent-color);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* ======== FORM ELEMENTS ======== */
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e1e1e1;
+  border-radius: 12px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: var(--transition);
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.input-field:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.1);
+}
+
+.input-field::placeholder {
+  color: #999;
+  transition: var(--transition);
+}
+
+.input-field:focus::placeholder {
+  opacity: 0;
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+  transition: var(--transition);
+}
+
+.toggle-password:hover {
+  color: var(--accent-color);
+}
+
+/* ======== BUTTON STYLES ======== */
+.btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: var(--text-white);
+  margin-bottom: 15px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1a3a5f 0%, #23496d 100%);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+  background: rgba(44, 95, 138, 0.1);
+}
+
+.btn-deposit {
+  background: var(--deposit-gradient);
+  color: var(--text-white);
+}
+
+.btn-deposit:hover {
+  background: linear-gradient(135deg, #0d877c 0%, #2fdf72 100%);
+}
+
+.btn-withdraw {
+  background: var(--withdraw-gradient);
+  color: var(--text-white);
+}
+
+.btn-withdraw:hover {
+  background: linear-gradient(135deg, #e93a60 0%, #f04123 100%);
+}
+
+.btn-logout {
+  background: var(--primary-gradient);
+  color: var(--text-white);
+  margin-top: 30px;
+}
+
+.btn-logout:hover {
+  background: linear-gradient(135deg, #1a3a5f 0%, #23496d 100%);
+}
+
+/* ======== DASHBOARD STYLES ======== */
+.main-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.balance-card {
+  grid-column: 1 / -1;
+  background: var(--balance-gradient);
+  color: var(--text-white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(44, 95, 138, 0.2);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.balance-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  transform: rotate(30deg);
+}
+
+.balance-amount {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 10px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+}
+
+.action-card {
+  background: var(--text-white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  border: 1px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--accent-color);
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.action-card h3 {
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-history {
+  grid-column: 1 / -1;
+  margin-top: 30px;
+}
+
+.transaction-history h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.transaction-table {
+  width: 100%;
+  background: var(--text-white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
+  border: 1px solid #f0f0f0;
+}
+
+.transaction-table th {
+  background: var(--primary-gradient);
+  color: var(--text-white);
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.transaction-table td {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: var(--transition);
+}
+
+.transaction-table tr:last-child td {
+  border-bottom: none;
+}
+
+.transaction-table tr:hover td {
+  background: #f8f9ff;
+}
+
+.transaction-deposit {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.transaction-withdrawal {
+  color: var(--error-color);
+  font-weight: 600;
+}
+
+/* ======== DECORATIVE ELEMENTS ======== */
+.floating-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.shape {
+  position: absolute;
+  background: rgba(44, 95, 138, 0.05);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  border: 1px solid rgba(44, 95, 138, 0.05);
+}
+
+.shape:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.shape:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.shape:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+/* ======== LOADING SPINNER ======== */
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--text-white);
+  animation: spin 1s linear infinite;
+}
+
+/* ======== NAVIGATION ======== */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.nav-buttons .btn {
+  flex: 1;
+}
+
+/* ======== ANIMATIONS ======== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.balance-card.pulse {
+  animation: pulse 1s ease;
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media (max-width: 768px) {
+  .app-container {
+    margin: 10px;
+    max-width: 100%;
+  }
+
+  .panel {
+    padding: 25px;
+  }
+
+  .main-dashboard {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  .balance-amount {
+    font-size: 2rem;
+  }
+  
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 20px;
+  }
+  
+  .action-card {
+    padding: 20px;
+  }
+  
+  .btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .input-field {
+    padding: 12px 15px;
+  }
+  
+  .transaction-table th,
+  .transaction-table td {
+    padding: 10px 12px;
+  }
+}
