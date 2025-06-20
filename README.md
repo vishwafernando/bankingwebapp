@@ -1,6 +1,6 @@
 # SecureBank - Vite + React Banking App
 
---
+----
 
 SecureBank is a simple, secure banking web application built with React and Vite.  
 It supports user signup, login, deposits, withdrawals, and transaction history.
