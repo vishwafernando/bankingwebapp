@@ -110,16 +110,16 @@ bankingwebapp/
 
 
 
-## License
+# License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 
 
-## Contributing
+# Contributing
 Feel free to submit issues and pull requests to improve the application. Your contributions are welcome!
 
  
-## Contact
+# Contact
 
 Created by Vishwa Fernando
 
