@@ -98,39 +98,39 @@ bankingwebapp/
 
 ### 🔹 Sign Up
 
--Click "Sign Up".
+- Click "Sign Up".
 
--Enter a username, password, and an initial balance.
+- Enter a username, password, and an initial balance.
 
 ### 🔹 Login
--Click "Login".
+- Click "Login".
 
--Enter your username and password.
+- Enter your username and password.
 
 ### 🔹 Deposit / Withdraw
--After logging in, use the form to deposit or withdraw money.
+- After logging in, use the form to deposit or withdraw money.
 
--Transactions are saved and displayed in real-time.
+- Transactions are saved and displayed in real-time.
 
 ### 🔹 Logout
--Click "Logout" to end the session securely.
+- Click "Logout" to end the session securely.
 
-### 📄 License
+## 📄 License
 This project is licensed under the MIT License.
 See the LICENSE file for full details.
 
-### 🤝 Contributing
+## 🤝 Contributing
 Contributions are welcome!
 Feel free to submit issues or pull requests to help improve this app.
 
-### 📬 Contact
+## 📬 Contact
 Created by Vishwa Fernando
 
--GitHub: https://github.com/vishwafernando
+- GitHub: https://github.com/vishwafernando
 
--Email: vishwafernando.vf@gmail.com
+- Email: vishwafernando.vf@gmail.com
 
--LinkedIn: https://linkedin.com/in/vishwafernando
+- LinkedIn: https://linkedin.com/in/vishwafernando
 
 Feel free to reach out if you have any questions or feedback!
 
