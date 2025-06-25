@@ -6,8 +6,7 @@ It supports user signup, login, deposits, withdrawals, and transaction history.
 ---
 
 ## 🚀 Live Demo
-
-[https://vishwafernando.github.io/bankingwebapp](https://vishwafernando.github.io/bankingwebapp)       
+   
 [https://bankingwebapp-nu.vercel.app](https://bankingwebapp-nu.vercel.app/)
 
 ---
@@ -51,33 +50,6 @@ npm install
 npm run dev
 ```
 
-### 🚀 Deployment to GitHub Pages
-
-To build and deploy the app to GitHub Pages:
-
-```bash
-npm run build
-npm run deploy
-```
-
-#### Configuration
-
-Ensure these settings are correct:
-
-In `vite.config.js`:
-
-```bash
-export default defineConfig({
-  base: '/bankingwebapp/',
-  plugins: [react()],
-});
-```
-
-In `package.json`:
-
-```bash
-"homepage": "https://vishwafernando.github.io/bankingwebapp"
-```
 
 ### 📁 Project Structure
 
@@ -128,10 +100,6 @@ Feel free to submit issues or pull requests to help improve this app.
 Created by Vishwa Fernando
 
 - GitHub: https://github.com/vishwafernando
-
-- Email: vishwafernando.vf@gmail.com
-
-- LinkedIn: https://linkedin.com/in/vishwafernando
 
 Feel free to reach out if you have any questions or feedback!
 
