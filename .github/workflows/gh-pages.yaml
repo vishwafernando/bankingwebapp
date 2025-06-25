@@ -1,9 +1,9 @@
-name: Deploy React App to GitHub Pages
+name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
     branches:
-      - master  # or "main", depending on your default branch
+      - master  # or "main" if that's your default
   workflow_dispatch:
 
 permissions:
@@ -31,13 +31,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build Vite project
         run: npm run build
 
-      - name: Upload production-ready build files
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: dist  # <-- Vite outputs to `dist` folder
 
   deploy:
     needs: build
