@@ -1,9 +1,10 @@
-"homepage": "https://vishwafernando.github.io/bankingwebapp" 
+
 {
   "name": "banking-app-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://vishwafernando.github.io/bankingwebapp",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
